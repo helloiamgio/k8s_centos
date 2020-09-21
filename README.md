@@ -1,6 +1,7 @@
+## HELLO.I.AM.GIO KUBERNETES CLUSTER ##
 ## Kubernetes
 
-Kubernetes (commonly stylized as k8s[3]) is an open-source container-orchestration system for automating application deployment, scaling, and management. It aims to provide a "platform for automating deployment, scaling, and operations of application containers across clusters of hosts".[3] It works with a range of container tools, including Docker.[5] Many cloud services offer a Kubernetes-based platform or infrastructure as a service (PaaS or IaaS) on which Kubernetes can be deployed as a platform-providing service. 
+Kubernetes (commonly stylized as k8s) is an open-source container-orchestration system for automating application deployment, scaling, and management. It aims to provide a "platform for automating deployment, scaling, and operations of application containers across clusters of hosts". It works with a range of container tools, including Docker. Many cloud services offer a Kubernetes-based platform or infrastructure as a service (PaaS or IaaS) on which Kubernetes can be deployed as a platform-providing service. 
 
 ---
 ### Kubernetes Cluster is based on VAGRANT IMAGES for CENTOS 7.8
@@ -32,6 +33,9 @@ $ kubectl -n kubernetes-dashboard describe service kubernetes-dashboard
 In order to access the Kubernetes Dashboard from our workstation, a NodePort will be created to publish the kubernetes-dashboard following the Publish an Application Outside Kubernetes Cluster instructions.
 
 The file kubernetes-dashboard-service-np.yaml is available in the repo
+- Creates an admin-user
+-  Assigns the cluster-admin role
+- Creates a new NodePort service that publishes TargetPort 8443 as NodePort 30002
 
 - Apply the changes
 $ kubectl apply -f kubernetes-dashboard-service-np.yaml 
