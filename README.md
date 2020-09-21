@@ -23,11 +23,10 @@ bootstrap_kworker: This script will join the worker nodes to the cluster
 
 ## Install the Kubernetes Dashboard ##
 
-To deploy the Web UI (Dashboard) or Kubernetes Dashboard run the following command:
+- To deploy the Web UI (Dashboard) or Kubernetes Dashboard run the following command:
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
 
-The deployment file will publish the Kubernetes Dashboard using a ClusterIP service as shown below using TargetPort 8443:
-
+- The deployment file will publish the Kubernetes Dashboard using a ClusterIP service as shown below using TargetPort 8443:
 $ kubectl -n kubernetes-dashboard describe service kubernetes-dashboard
 
 In order to access the Kubernetes Dashboard from our workstation, a NodePort will be created to publish the kubernetes-dashboard following the Publish an Application Outside Kubernetes Cluster instructions.
