@@ -17,8 +17,8 @@ Kubernetes (commonly stylized as k8s) is an open-source container-orchestration 
     Ansible 2.9.6 
 
 ## Command :
-- `cd kubernetes/vagrant-provisioning
-- `ls -ltr
+- `cd kubernetes/vagrant-provisioning`
+- `ls -ltr`
 
 Vagrantfile: The primary function of the Vagrantfile is to describe the type of machine required for a project, and how to configure and provision these machines. In this file, you will have settings such as operating system type, hostnames of your VMs in the cluster, node count for a few examples. The file also specifies the bootstrap scripts.
 bootstrap.sh: This file is a basic set of initial instructions that will generally be applied to both the master Kubernetes node and the worker nodes as well. It does things such as update the /etc/hosts file to include all the nodes, installs docker, disable selling and firewalld. It also installed Kubernetes 
@@ -27,15 +27,15 @@ bootstrap_kmaster.sh: This file Initialize Kubernetes, create the flannel networ
 
 bootstrap_kworker: This script will join the worker nodes to the cluster
 
-- `vagrant up
-- `vagrant status
-- `vagrant ssh kmaster
-- `kubectl get all --all-namespaces
+- `vagrant up`
+- `vagrant status`
+- `vagrant ssh kmaster`
+- `kubectl get all --all-namespaces`
 
 ## Install the Kubernetes Dashboard ##
 
 - To deploy the Web UI (Dashboard) or Kubernetes Dashboard run the following command:
-`kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+`kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml`
 
 - The deployment file will publish the Kubernetes Dashboard using a ClusterIP service as shown below using TargetPort 8443:
 `kubectl -n kubernetes-dashboard describe service kubernetes-dashboard`
