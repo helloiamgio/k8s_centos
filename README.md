@@ -6,6 +6,16 @@ Kubernetes (commonly stylized as k8s) is an open-source container-orchestration 
 ---
 ### Kubernetes Cluster is based on VAGRANT IMAGES for CENTOS 7.8
 
+## Prerequisites
+
+    A Linux/Windows workstation with At least 8 GB of RAM and 15 GB of free hard disk space for the virtual machines.
+  
+    Vagrant 2.2.6
+ 
+    VirtualBox 6.1.6 or above
+ 
+    Ansible 2.9.6 
+
 ## Command :
 - cd kubernetes/vagrant-provisioning
 - ls -ltr
