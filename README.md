@@ -48,26 +48,18 @@ Access the Kubernetes Dashboard using the URL https://<MASTER_IP>:30002/#/login 
 ## BONUS ##
 ## Please read other ways to publish the Kubernetes Dashboard on the Kubernetes Dashboard documentation.
 Useful Vagrant commands
-#Create the cluster or start the cluster after a host reboot
-vagrant up
+#Create the cluster or start the cluster after a host reboot --> vagrant up
 
-#Execute again the Ansible playlist in all the vagrant boxes, useful during development of Ansible playbooks
-vagrant provision 
+#Execute again the Ansible playlist in all the vagrant boxes, useful during development of Ansible playbooks --> vagrant provision 
 
-#Execute again the Ansible playlist in the Kubernetes node 1
-vagrant provision k8s-n-1
+#Execute again the Ansible playlist in the Kubernetes node 1 --> vagrant provision k8s-n-1
 
-#Poweroff the Kubernetes Cluster
-vagrant halt
+#Poweroff the Kubernetes Cluster --> vagrant halt
 
-#Open an ssh connection to the Kubernetes master
-vagrant ssh k8s-m-1
+#Open an ssh connection to the Kubernetes master --> vagrant ssh k8s-m-1
 
-#Open an ssh connection to the Kubernetes node 1
-vagrant ssh k8s-n-1
+#Open an ssh connection to the Kubernetes node 1 --> vagrant ssh k8s-n-1
 
-#Open an ssh connection to the Kubernetes node 2
-vagrant ssh k8s-n-2
+#Open an ssh connection to the Kubernetes node 2 --> vagrant ssh k8s-n-2
 
-#Stop all Vagrant machines (use vagrant up to start)
-vagrant halt
+#Stop all Vagrant machines (use vagrant up to start) --> vagrant halt
