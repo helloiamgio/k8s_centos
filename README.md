@@ -20,7 +20,7 @@ bootstrap_kworker: This script will join the worker nodes to the cluster
 - vagrant ssh kmaster
 - kubectl get all --all-namespaces
 
-## Install the Kubernetes Dashboard
+## Install the Kubernetes Dashboard ##
 
 To deploy the Web UI (Dashboard) or Kubernetes Dashboard run the following command:
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
@@ -28,23 +28,10 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/a
 The deployment file will publish the Kubernetes Dashboard using a ClusterIP service as shown below using TargetPort 8443:
 
 $ kubectl -n kubernetes-dashboard describe service kubernetes-dashboard
-Name:              kubernetes-dashboard
-Namespace:         kubernetes-dashboard
-Labels:            k8s-app=kubernetes-dashboard
-Annotations:       kubectl.kubernetes.io/last-applied-configuration:
-                     {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"k8s-app":"kubernetes-dashboard"},"name":"kubernetes-dashboard"...
-Selector:          k8s-app=kubernetes-dashboard
-Type:              ClusterIP
-IP:                10.98.98.132
-Port:              <unset>  443/TCP
-TargetPort:        8443/TCP
-Endpoints:         192.168.122.134:8443
-Session Affinity:  None
-Events:            <none>
 
 In order to access the Kubernetes Dashboard from our workstation, a NodePort will be created to publish the kubernetes-dashboard following the Publish an Application Outside Kubernetes Cluster instructions.
 
-The file kubernetes-dashboard-service-np.yaml
+The file kubernetes-dashboard-service-np.yaml is available in the repo
 
 - Apply the changes
 $ kubectl apply -f kubernetes-dashboard-service-np.yaml 
@@ -54,7 +41,7 @@ $ kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashbo
 
 Access the Kubernetes Dashboard using the URL https://<MASTER_IP>:30002/#/login using the token printed before:
 
-
+## BONUS ##
 ## Please read other ways to publish the Kubernetes Dashboard on the Kubernetes Dashboard documentation.
 Useful Vagrant commands
 #Create the cluster or start the cluster after a host reboot
